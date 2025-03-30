@@ -19,11 +19,11 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 
 ## 🏗 **Project Features**  
 
-✅ **📝 File Complaints:** Users can describe their grievances in natural language.  
-✅ **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
-✅ **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
-✅ **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
-✅ **⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
+ **📝 File Complaints:** Users can describe their grievances in natural language.  
+ **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
+ **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
+ **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
+ **⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
 
 ---
 
@@ -38,28 +38,6 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 | **Azure Document Intelligence** | Extracts structured data from uploaded grievance forms (optional) |
 | **Azure Blob Storage** | Stores grievance data and logs |
 | **GitHub & Streamlit Cloud** | Deployment and hosting |
-
----
-
-## 📂 **Project Folder Structure**  
-
-```
-CITIZEN_GRIEVANCE_CHATBOT
-┣ 📂 config
-┃ ┗ 📜 config.py  # Stores API keys and Azure service details
-┣ 📂 data
-┃ ┗ 📜 synthetic_grievances.json  # Sample grievance data
-┣ 📂 logs  
-┣ 📂 models  
-┣ 📜 .env  # Environment variables (not committed to GitHub)
-┣ 📜 README.md  # Project documentation
-┣ 📜 requirements.txt  # Dependencies
-┣ 📜 ai_search.py  # Azure AI Search integration
-┣ 📜 chatbot.py  # Chatbot logic
-┣ 📜 complaint_classifier.py  # Classification logic
-┣ 📜 preprocessing.py  # Data preprocessing
-┣ 📜 app.py  # Streamlit UI for the chatbot
-```
 
 ---
 
@@ -144,7 +122,7 @@ git push origin main
 
 ---
 
-## 🔥 **Future Enhancements**  
+##  **Future Enhancements**  
 
 🔹 **Multilingual Support:** Enable grievance filing in **regional languages**.  
 🔹 **Integration with Government APIs:** Automate complaint registration in **official portals**.  
