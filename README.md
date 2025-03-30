@@ -1,6 +1,3 @@
-Here's your updated `README.md`, now including **Complaint ID generation** and **Tracking System** details:  
-
----
 
 # 🆘 Citizen Grievance Chatbot  
 
@@ -21,12 +18,12 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 
 ## 🏗 **Project Features**  
 
-✅ **📝 File Complaints:** Users can describe their grievances in natural language.  
-✅ **🆔 Complaint ID Generation & Tracking:** Each complaint gets a unique **Complaint ID** for tracking.  
-✅ **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
-✅ **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
-✅ **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
-✅ **⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
+**📝 File Complaints:** Users can describe their grievances in natural language.  
+**🆔 Complaint ID Generation & Tracking:** Each complaint gets a unique **Complaint ID** for tracking.  
+**🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
+**🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
+**🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
+**⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
 
 ---
 
@@ -146,7 +143,7 @@ git push origin main
 
 🔎 **Later, when the user checks their complaint status:**  
 🆔 **User Enters Complaint ID:** *"GRV-20250331-123456"*  
-✅ **Status Retrieved:** *"Your complaint has been assigned to the municipal office and is currently being reviewed."*  
+   **Status Retrieved:** *"Your complaint has been assigned to the municipal office and is currently being reviewed."*  
 
 ---
 
@@ -170,9 +167,3 @@ This project is licensed under the **Apache License**.
 
 ---
 
-This updated `README.md` now includes:  
-✅ **Complaint ID generation** details  
-✅ **How users can track their complaints**  
-✅ **Updated "How It Works" and "Use Case Example" sections**  
-
-Let me know if you need any modifications! 🚀
