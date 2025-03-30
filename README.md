@@ -17,12 +17,12 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 
 ## 🏗 **Project Features**  
 
- **📝 File Complaints:** Users can describe their grievances in natural language.
- ** 🆔 Complaint ID Generation & Tracking: Each complaint gets a unique Complaint ID for tracking.
- **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
- **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
- **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
- **⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
+📝 File Complaints: Users can describe their grievances in natural language.
+🆔 Complaint ID Generation & Tracking: Each complaint gets a unique Complaint ID for tracking.
+🔍 AI Search for Similar Complaints: The chatbot retrieves relevant past grievances from Azure AI Search.
+🤖 AI-Powered Responses: The chatbot generates possible solutions using Azure OpenAI (GPT-4o).
+🎨 User-Friendly Interface: A sleek Streamlit UI for easy interaction.
+⚡ Scalable & Secure: Built with Azure services, ensuring security & performance.  
 
 ---
 
