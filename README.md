@@ -1,7 +1,3 @@
-Here’s a **detailed and easy-to-understand** `README.md` for your **Citizen Grievance Chatbot** project:  
-
----
-
 # 🆘 Citizen Grievance Chatbot  
 
 ### **An AI-powered chatbot for citizen complaint redressal using Azure AI & OpenAI services.**  
@@ -21,7 +17,8 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 
 ## 🏗 **Project Features**  
 
- **📝 File Complaints:** Users can describe their grievances in natural language.  
+ **📝 File Complaints:** Users can describe their grievances in natural language.
+ ** 🆔 Complaint ID Generation & Tracking: Each complaint gets a unique Complaint ID for tracking.
  **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
  **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
  **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
@@ -103,25 +100,33 @@ git push origin main
 
 ## 🧩 **How It Works**  
 
-1️⃣ **User enters a complaint** into the chatbot.  
-2️⃣ The **chatbot searches past grievances** using **Azure AI Search**.  
-3️⃣ If similar cases exist, they are **retrieved & displayed**.  
-4️⃣ The **chatbot generates a response** using **Azure OpenAI GPT-4o**.  
-5️⃣ The user receives **both past references & AI-generated solutions**.  
+1️⃣ User enters a complaint into the chatbot.
+2️⃣ The chatbot generates a unique Complaint ID and saves the complaint.
+3️⃣ The chatbot searches past grievances using Azure AI Search.
+4️⃣ If similar cases exist, they are retrieved & displayed.
+5️⃣ The chatbot generates a response using Azure OpenAI GPT-4o.
+6️⃣ The user receives both past references & AI-generated solutions.
+7️⃣ User can later check their Complaint ID to track grievance status.  
 
 ---
 
-## 📌 **Use Case Example**  
+📌 Use Case Example
+🔹 User Complaint: "The streetlights in my area have been broken for weeks. No action has been taken."
 
-🔹 **User Complaint:** *"The streetlights in my area have been broken for weeks. No action has been taken."*  
+🔍 AI Search Results:
 
-🔍 **AI Search Results:**  
-- *"Streetlights were repaired in XYZ area after a complaint to the municipal office."*  
-- *"Civic authorities resolved a similar issue in ABC colony within 7 days."*  
+"Streetlights were repaired in XYZ area after a complaint to the municipal office."
 
-🤖 **AI Response:**  
-*"Based on past grievances, you can report this issue to the municipal office under the streetlight maintenance department. Your complaint will be addressed within 7 days."*  
+"Civic authorities resolved a similar issue in ABC colony within 7 days."
 
+🆔 Complaint ID: "GRV-20250331-123456"
+
+🤖 AI Response:
+"Based on past grievances, you can report this issue to the municipal office under the streetlight maintenance department. Your complaint will be addressed within 7 days."
+
+🔎 Later, when the user checks their complaint status:
+🆔 User Enters Complaint ID: "GRV-20250331-123456"
+✅ Status Retrieved: "Your complaint has been assigned to the municipal office and is currently being reviewed."
 ---
 
 ##  **Future Enhancements**  
