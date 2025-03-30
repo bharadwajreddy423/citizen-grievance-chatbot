@@ -1,0 +1,10 @@
+pandas==2.1.4
+numpy==1.26.4
+scikit-learn==1.6.1
+openai==1.69.0
+azure-core==1.29.5
+azure-search-documents==11.4.0
+streamlit==1.32.0
+python-dotenv==1.0.1
+tqdm==4.66.2
+fastapi==0.110.0
