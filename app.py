@@ -8,15 +8,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 from chatbot import Chatbot
 import config  # Import configuration variables
 
-# Initialize Chatbot with API keys & endpoints from config.py
-chatbot = Chatbot(
-    openai_api_key=config.AZURE_OPENAI_API_KEY,
-    openai_endpoint=config.AZURE_OPENAI_ENDPOINT,
-    deployment_name=config.AZURE_OPENAI_DEPLOYMENT_NAME,
-    search_api_key=config.AZURE_AI_SEARCH_API_KEY,
-    search_endpoint=config.AZURE_AI_SEARCH_ENDPOINT,
-    search_index=config.AZURE_AI_SEARCH_INDEX_NAME,
-)
+# Initialize Chatbot (WITHOUT passing API keys)
+chatbot = Chatbot()  # ✅ Fix: No unnecessary arguments
 
 # Set up Streamlit UI with custom styling
 st.set_page_config(
