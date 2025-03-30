@@ -1,5 +1,6 @@
 import os
 import sys
+import random
 import streamlit as st
 
 # Add src/ to system path so Python can find chatbot.py
@@ -64,9 +65,15 @@ st.markdown("<h4 style='text-align: center;'>🔹 Describe your complaint, and t
 st.markdown("### 📝 Enter Your Complaint Below:")
 user_input = st.text_area("Describe the issue you are facing:", height=150)
 
+# Generate a random 7-digit complaint ID function
+def generate_complaint_id():
+    return str(random.randint(1000000, 9999999))
+
 # Submit Button
 if st.button("🚀 Submit"):
     if user_input:
+        complaint_id = generate_complaint_id()  # Generate a unique complaint ID
+        
         with st.spinner("🔍 Searching past grievances..."):
             search_results = chatbot.search_grievances(user_input)
 
@@ -82,8 +89,24 @@ if st.button("🚀 Submit"):
 
         st.markdown("## 🤖 AI Response")
         st.success(ai_response)
+
+        # Display Complaint ID
+        st.markdown(f"### 📌 Your Complaint ID: `{complaint_id}`")
+        st.info("Use this Complaint ID to track your complaint status.")
+
     else:
         st.warning("⚠️ Please enter a complaint before submitting.")
+
+# Tracking Input Section
+st.sidebar.markdown("### 🔍 Track Your Complaint")
+tracking_input = st.sidebar.text_input("Enter your Complaint ID to track:")
+
+# Fixed tracking response
+if tracking_input:
+    if tracking_input.isdigit() and len(tracking_input) == 7:
+        st.sidebar.success("✅ Your complaint has been assigned to the concerned department. You will receive updates via email and SMS once resolved.")
+    else:
+        st.sidebar.warning("⚠️ Please enter a valid 7-digit Complaint ID.")
 
 # Sidebar Info
 st.sidebar.header("ℹ️ About the Chatbot")
