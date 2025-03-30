@@ -1,18 +1,22 @@
 import os
 import sys
 import streamlit as st
-from dotenv import load_dotenv
 
 # Add src/ to system path so Python can find chatbot.py
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "src")))
 
 from chatbot import Chatbot
+import config  # Import configuration variables
 
-# Load environment variables
-load_dotenv()
-
-# Initialize Chatbot
-chatbot = Chatbot()
+# Initialize Chatbot with API keys & endpoints from config.py
+chatbot = Chatbot(
+    openai_api_key=config.AZURE_OPENAI_API_KEY,
+    openai_endpoint=config.AZURE_OPENAI_ENDPOINT,
+    deployment_name=config.AZURE_OPENAI_DEPLOYMENT_NAME,
+    search_api_key=config.AZURE_AI_SEARCH_API_KEY,
+    search_endpoint=config.AZURE_AI_SEARCH_ENDPOINT,
+    search_index=config.AZURE_AI_SEARCH_INDEX_NAME,
+)
 
 # Set up Streamlit UI with custom styling
 st.set_page_config(
@@ -30,9 +34,6 @@ st.markdown("""
         }
         .stApp {
             background: linear-gradient(to right, #4facfe, #00f2fe);
-        }
-        .reportview-container {
-            background: #f4f4f9;
         }
         .css-18e3th9 {
             padding: 2rem !important;
