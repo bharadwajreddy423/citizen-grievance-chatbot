@@ -3,7 +3,7 @@
 
 ### **An AI-powered chatbot for citizen complaint redressal using Azure AI & OpenAI services.**  
 
-##  **Overview**  
+##   **Overview**  
 
 The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to help citizens **file complaints, track past grievances, and get AI-generated resolutions**. It uses **Azure OpenAI (GPT-4o)** to generate responses and **Azure AI Search** to fetch similar past grievances, making the redressal process **faster and more efficient**.  
 
