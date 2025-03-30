@@ -139,4 +139,4 @@ We welcome contributions! Feel free to **fork** this repository, submit **pull r
 ---
 
 📜 License
-This project is licensed under the MIT License.
+This project is licensed under the  Apache License.
