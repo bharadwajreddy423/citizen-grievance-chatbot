@@ -1,3 +1,7 @@
+Here's your updated `README.md`, now including **Complaint ID generation** and **Tracking System** details:  
+
+---
+
 # 🆘 Citizen Grievance Chatbot  
 
 ### **An AI-powered chatbot for citizen complaint redressal using Azure AI & OpenAI services.**  
@@ -9,20 +13,20 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 ### **👨‍💼 Who is this for?**  
 - **Citizens** who want to file complaints and check previous grievances.  
 - **Government officials** who need an AI-assisted way to manage public grievances.  
-- **Developers & AI enthusiasts** exploring how Azure OpenAI can be used in real-world applications. 
+- **Developers & AI enthusiasts** exploring how Azure OpenAI can be used in real-world applications.  
 
-🔗 **Live App:** [Citizen Grievance Chatbot](https://ewmwu4gykjccurcsvkyko2.streamlit.app/) 
+🔗 **Live App:** [Citizen Grievance Chatbot](https://ewmwu4gykjccurcsvkyko2.streamlit.app/)  
 
 ---
 
 ## 🏗 **Project Features**  
 
-📝 File Complaints: Users can describe their grievances in natural language.
-🆔 Complaint ID Generation & Tracking: Each complaint gets a unique Complaint ID for tracking.
-🔍 AI Search for Similar Complaints: The chatbot retrieves relevant past grievances from Azure AI Search.
-🤖 AI-Powered Responses: The chatbot generates possible solutions using Azure OpenAI (GPT-4o).
-🎨 User-Friendly Interface: A sleek Streamlit UI for easy interaction.
-⚡ Scalable & Secure: Built with Azure services, ensuring security & performance.  
+✅ **📝 File Complaints:** Users can describe their grievances in natural language.  
+✅ **🆔 Complaint ID Generation & Tracking:** Each complaint gets a unique **Complaint ID** for tracking.  
+✅ **🔍 AI Search for Similar Complaints:** The chatbot retrieves relevant past grievances from **Azure AI Search**.  
+✅ **🤖 AI-Powered Responses:** The chatbot generates possible solutions using **Azure OpenAI (GPT-4o)**.  
+✅ **🎨 User-Friendly Interface:** A sleek **Streamlit UI** for easy interaction.  
+✅ **⚡ Scalable & Secure:** Built with **Azure services**, ensuring security & performance.  
 
 ---
 
@@ -63,6 +67,7 @@ AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment-name
 AZURE_AI_SEARCH_API_KEY=your-ai-search-api-key
 AZURE_AI_SEARCH_ENDPOINT=your-ai-search-endpoint
 AZURE_AI_SEARCH_INDEX_NAME=grievanceindex
+AZURE_STORAGE_CONNECTION_STRING=your-azure-blob-storage-connection-string
 ```
 
 Alternatively, if deploying to **Streamlit Cloud**, add these to **secrets.toml**:  
@@ -74,6 +79,7 @@ AZURE_OPENAI_DEPLOYMENT_NAME = "your-deployment-name"
 AZURE_AI_SEARCH_API_KEY = "your-ai-search-api-key"
 AZURE_AI_SEARCH_ENDPOINT = "your-ai-search-endpoint"
 AZURE_AI_SEARCH_INDEX_NAME = "grievanceindex"
+AZURE_STORAGE_CONNECTION_STRING = "your-azure-blob-storage-connection-string"
 ```
 
 ### **4️⃣ Run the Application Locally**  
@@ -98,42 +104,57 @@ git push origin main
 
 ---
 
-## 🧩 **How It Works**  
+## 🆔 **Complaint ID Generation & Tracking**  
 
-1️⃣ User enters a complaint into the chatbot.
-2️⃣ The chatbot generates a unique Complaint ID and saves the complaint.
-3️⃣ The chatbot searches past grievances using Azure AI Search.
-4️⃣ If similar cases exist, they are retrieved & displayed.
-5️⃣ The chatbot generates a response using Azure OpenAI GPT-4o.
-6️⃣ The user receives both past references & AI-generated solutions.
-7️⃣ User can later check their Complaint ID to track grievance status.  
+### 🔹 **How Complaint IDs Work**
+- When a **new complaint is filed**, the system assigns a **unique Complaint ID**.
+- Complaint IDs are stored in **Azure Blob Storage** and retrieved when needed.
+- Users can **track the status** of their complaint by entering their **Complaint ID**.
+
+### 🔹 **Tracking a Complaint**
+1️⃣ **User enters their Complaint ID** in the chatbot.  
+2️⃣ **The system searches** the stored complaints in **Azure AI Search**.  
+3️⃣ **If found**, the system retrieves the complaint status (e.g., *"In Progress"*, *"Resolved"*, etc.).  
+4️⃣ **The chatbot updates the user** on the current status of their grievance.  
 
 ---
 
-📌 Use Case Example
-🔹 User Complaint: "The streetlights in my area have been broken for weeks. No action has been taken."
+## 🧩 **How It Works**  
 
-🔍 AI Search Results:
+1️⃣ **User enters a complaint** into the chatbot.  
+2️⃣ The **chatbot generates a unique Complaint ID** and saves the complaint.  
+3️⃣ The **chatbot searches past grievances** using **Azure AI Search**.  
+4️⃣ If similar cases exist, they are **retrieved & displayed**.  
+5️⃣ The **chatbot generates a response** using **Azure OpenAI GPT-4o**.  
+6️⃣ The user receives **both past references & AI-generated solutions**.  
+7️⃣ **User can later check their Complaint ID** to track grievance status.  
 
-"Streetlights were repaired in XYZ area after a complaint to the municipal office."
+---
 
-"Civic authorities resolved a similar issue in ABC colony within 7 days."
+## 📌 **Use Case Example**  
 
-🆔 Complaint ID: "GRV-20250331-123456"
+🔹 **User Complaint:** *"The streetlights in my area have been broken for weeks. No action has been taken."*  
 
-🤖 AI Response:
-"Based on past grievances, you can report this issue to the municipal office under the streetlight maintenance department. Your complaint will be addressed within 7 days."
+🔍 **AI Search Results:**  
+- *"Streetlights were repaired in XYZ area after a complaint to the municipal office."*  
+- *"Civic authorities resolved a similar issue in ABC colony within 7 days."*  
 
-🔎 Later, when the user checks their complaint status:
-🆔 User Enters Complaint ID: "GRV-20250331-123456"
-✅ Status Retrieved: "Your complaint has been assigned to the municipal office and is currently being reviewed."
+🆔 **Complaint ID:** *"GRV-20250331-123456"*  
+
+🤖 **AI Response:**  
+*"Based on past grievances, you can report this issue to the municipal office under the streetlight maintenance department. Your complaint will be addressed within 7 days."*  
+
+🔎 **Later, when the user checks their complaint status:**  
+🆔 **User Enters Complaint ID:** *"GRV-20250331-123456"*  
+✅ **Status Retrieved:** *"Your complaint has been assigned to the municipal office and is currently being reviewed."*  
+
 ---
 
 ##  **Future Enhancements**  
 
 🔹 **Multilingual Support:** Enable grievance filing in **regional languages**.  
 🔹 **Integration with Government APIs:** Automate complaint registration in **official portals**.  
-🔹 **Complaint Tracking System:** Allow users to track **real-time status** of complaints.  
+🔹 **Advanced Complaint Status Updates:** Provide **real-time tracking** (e.g., "Pending", "Under Review", "Resolved").  
 🔹 **Speech-to-Text:** Users can **speak** their complaints instead of typing.  
 
 ---
@@ -141,7 +162,17 @@ git push origin main
 ## 🤝 **Contributing**  
 
 We welcome contributions! Feel free to **fork** this repository, submit **pull requests**, or report **issues**.  
+
 ---
 
-📜 License
-This project is licensed under the  Apache License.
+📜 License  
+This project is licensed under the **Apache License**.  
+
+---
+
+This updated `README.md` now includes:  
+✅ **Complaint ID generation** details  
+✅ **How users can track their complaints**  
+✅ **Updated "How It Works" and "Use Case Example" sections**  
+
+Let me know if you need any modifications! 🚀
