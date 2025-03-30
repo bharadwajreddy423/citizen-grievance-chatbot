@@ -15,7 +15,7 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 - **Government officials** who need an AI-assisted way to manage public grievances.  
 - **Developers & AI enthusiasts** exploring how Azure OpenAI can be used in real-world applications. 
 
-🔗 **Live App:** [Citizen Grievance Chatbot](https://ewmwu4gykjccurcsvkyko2.streamlit.app/) 🚀 
+🔗 **Live App:** [Citizen Grievance Chatbot](https://ewmwu4gykjccurcsvkyko2.streamlit.app/) 
 
 ---
 
