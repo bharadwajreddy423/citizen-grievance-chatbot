@@ -36,7 +36,6 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 | **Streamlit** | Interactive UI for the chatbot |
 | **Azure OpenAI (GPT-4o)** | AI-generated responses to citizen grievances |
 | **Azure AI Search** | Fetches past grievances to improve response accuracy |
-| **Azure Document Intelligence** | Extracts structured data from uploaded grievance forms (optional) |
 | **Azure Blob Storage** | Stores grievance data and logs |
 | **GitHub & Streamlit Cloud** | Deployment and hosting |
 
