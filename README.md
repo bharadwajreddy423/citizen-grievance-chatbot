@@ -17,6 +17,7 @@ The **Citizen Grievance Chatbot** is an AI-powered virtual assistant designed to
 ---
 
 ## 🏗 **Project Features**  
+![Screenshot 2025-03-31 101609](https://github.com/user-attachments/assets/d326ce47-bb02-45ee-ae86-fab73893da08)
 
 **📝 File Complaints:** Users can describe their grievances in natural language.  
 **🆔 Complaint ID Generation & Tracking:** Each complaint gets a unique **Complaint ID** for tracking.  
